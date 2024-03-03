@@ -21,4 +21,34 @@ source = "vcs"
 
 [tool.hatch.envs.default]
 python = "3.8"
-dependencies = []
+dependencies = [
+  "black==24.2.0",
+  "docformatter[tomli]",
+  "isort==5.13.2",
+  "mypy==1.9.0",
+  "ruff==0.3.2",
+  "pytest==8.1.1",
+]
+
+[tool.hatch.envs.default.scripts]
+format = "black . && docformatter --in-place -r . && isort ."
+lint = "black --check . && isort --check . && mypy . && ruff check ."
+test = "pytest"
+
+[[tool.hatch.envs.ci.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.black]
+
+[tool.docformatter]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+strict = true
+disallow_subclassing_any = false
+ignore_missing_imports = true
+
+[tool.ruff.lint]
+select = ["F"]
