@@ -5,7 +5,7 @@ from zstandard import ZstdCompressor
 
 class ZstdPlugin:
     def __init__(self, file: BinaryIO, feed_options: Dict[str, Any]) -> None:
-        self.writer = ZstdCompressor().stream_writer(file)
+        self.writer = ZstdCompressor().stream_writer(file, closefd=False)
 
     def write(self, data: bytes) -> int:
         return self.writer.write(data)

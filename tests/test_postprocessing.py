@@ -7,7 +7,6 @@ from scrapy_zstd.postprocessing import ZstdPlugin
 
 def test_compress_zstd() -> None:
     output_file = BytesIO()
-    output_file.close = lambda: None  # type: ignore
 
     plugin = ZstdPlugin(output_file, {})
     plugin.write(b"hello")
