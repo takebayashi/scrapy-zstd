@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scrapy-zstd"
+dynamic = ["version"]
+description = ""
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Shun Takebayashi" },
+]
+classifiers = []
+dependencies = []
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.envs.default]
+python = "3.8"
+dependencies = []
