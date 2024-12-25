@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.0] - 2024-12-25
+
+### Added
+
+- Added support for Python 3.13
+
+### Removed
+
+- Dropped support for Python 3.8
+
 ## [0.1.1] - 2024-03-24
 
 ### Fixed
