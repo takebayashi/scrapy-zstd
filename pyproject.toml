@@ -7,7 +7,7 @@ name = "scrapy-zstd"
 dynamic = ["version"]
 description = "A Scrapy plugin to compress feeds with Zstandard (zstd)."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = "MIT"
 keywords = []
 authors = [
@@ -27,7 +27,7 @@ Homepage = "https://github.com/takebayashi/scrapy-zstd"
 source = "vcs"
 
 [tool.hatch.envs.default]
-python = "3.8"
+python = "3.9"
 dependencies = [
   "black==24.2.0",
   "docformatter[tomli]",
@@ -43,7 +43,7 @@ lint = "black --check . && isort --check . && mypy . && ruff check ."
 test = "pytest"
 
 [[tool.hatch.envs.ci.matrix]]
-python = ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
+python = ["3.9", "3.10", "3.11", "3.12", "3.13"]
 
 [tool.black]
 
