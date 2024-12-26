@@ -21,6 +21,11 @@ FEEDS = {
     "/path/to/file.csv.zst": {
         "format": "csv",
         "postprocessing": ["scrapy_zstd.postprocessing.ZstdPlugin"],
+        "zstd_compresslevel": 7,
     }
 }
 ```
+
+### Configuration Options
+
+- `zstd_compresslevel` (default: `3`): The compression level for Zstandard. It must be an integer up to 22.
