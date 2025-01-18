@@ -44,7 +44,7 @@ lint = "black --check . && isort --check . && mypy . && ruff check ."
 test = "pytest"
 
 [[tool.hatch.envs.ci.matrix]]
-python = ["3.9", "3.10", "3.11", "3.12", "3.13"]
+python = ["3.9", "3.10", "3.11", "3.12", "3.13", "pypy3.9", "pypy3.10"]
 
 [tool.black]
 
